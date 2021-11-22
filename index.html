@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsivo BK</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#"><img src="assets/img/logo.png" alt="logo" class="logo"></a>
+      <div class="toggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>Menos Cringe,<br><span> mais hambúrguer com batata frita!</span></h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.</p>
+        <a href="#">Compre agora</a>
+      </div>
+      <div class="imgBox">
+        <img src="assets/img/img1.png" class="burger" alt="img1">
+      </div>
+    </div>
+    <ul class="thumb">
+      <li><img src="assets/img/img1.png" onclick="imgSlider('assets/img/img1.png');changeCircleColor('#ff8c00')" alt="">
+      </li>
+      <li><img src="assets/img/img2.png" onclick="imgSlider('assets/img/img2.png');changeCircleColor('#25258e')" alt="">
+      </li>
+      <li><img src="assets/img/img3.png" onclick="imgSlider('assets/img/img3.png');changeCircleColor('#b30000')" alt="">
+      </li>
+
+    </ul>
+
+    <ul class="sci">
+      <li><a href="#"><img src="assets/img/facebook-fill.png" alt="facelogo"></a></li>
+      <li><a href="#"><img src="assets/img/twitter-fill.png" alt="twitterlogo"></a></li>
+      <li><a href="#"><img src="assets/img/instagram-line.png" alt="instalogo"></a></li>
+
+    </ul>
+
+  </section>
+  <section class="Menu">
+    <h2 class="text_menu">Escolha o <br> <span>Seu</span> </h2>
+    <div class="grid_conteiner">
+      <div class="menu_card">
+        <img src="assets/img/img1.png" alt="" class="img_burger">
+        <div class="menu_content">
+          <div class="menu_data">
+            <h3 class="menu_tittle">Comum</h3>
+            <span class="preco_subtitle">$28</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form">
+    <div class="form_bg">
+      <div class="form_container">
+        <h2 class="section_title form_title">Entre em contato <br>Conosco</h2>
+        <p class="form_description">Entre em contato com nosso suporte</p>
+
+        <form action="" class="form_contat">
+          <input type="text" placeholder="Coloque seu Email" class="form_input">
+          <button class="button">
+            Enviar
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function imgSlider(anything) {
+      document.querySelector('.burger').src = anything;
+    }
+    function changeCircleColor(color) {
+      const circle = document.querySelector('.circle');
+      circle.style.background = color;
+    }
+    function toggleMenu() {
+      var menuToggle = document.querySelector('.toggle');
+      var navigation = document.querySelector('.navigation');
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>
